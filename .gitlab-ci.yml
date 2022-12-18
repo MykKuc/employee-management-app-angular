@@ -1,0 +1,28 @@
+# Indicate the CI/CD Pipeline stages of the project.
+stages:
+    - build
+    - deploy
+
+build employee management app angular:
+    stage: build
+    image: node:18-alpine3.17
+    script:
+      - echo "Starting Application build stage."
+      - ng version
+      - echo "Running unit tests."
+      - ng test
+      - echo "Building the application."
+      - ng build
+    artifacts:
+      paths:
+        - dist/employee-management-app-angular/
+      expire_in: "3 minutes"
+
+deploy application to amazon s3:
+    stage: deploy
+    image:
+      name: amazon/aws-cli:2.9
+      entrypoint: [""]
+    script:
+      - aws --version
+      - aws s3 sync dist/employee-management-app-angular/ s3://$AWS_S3_BUCKET --delete
