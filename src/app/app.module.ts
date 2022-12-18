@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { EmployeeslistComponent } from './employeeslist/employeeslist.component';
 import { CategorylistComponent } from './categorylist/categorylist.component';
 import { NewemployeeComponent } from './newemployee/newemployee.component';
+import { EmployeecardComponent } from './employeecard/employeecard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { NewemployeeComponent } from './newemployee/newemployee.component';
     MainpageComponent,
     EmployeeslistComponent,
     CategorylistComponent,
-    NewemployeeComponent
+    NewemployeeComponent,
+    EmployeecardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
