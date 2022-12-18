@@ -11,7 +11,7 @@ build employee management app angular:
       - echo "Starting Application build stage."
       - ./node_modules/.bin/ng version
       - echo "Running unit tests."
-      - ./node_modules/.bin/ng test
+      - ./node_modules/.bin/ng test --watch=false --code-coverage
       - echo "Building the application."
       - ./node_modules/.bin/ng build
     artifacts:
