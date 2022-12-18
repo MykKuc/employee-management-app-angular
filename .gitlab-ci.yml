@@ -20,7 +20,7 @@ build employee management app angular:
 deploy application to amazon s3:
     stage: deploy
     image:
-      name: amazon/aws-cli:2.9
+      name: amazon/aws-cli:2.9.0
       entrypoint: [""]
     script:
       - aws --version
