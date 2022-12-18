@@ -8,8 +8,6 @@ build employee management app angular:
     image: node:18-alpine3.17
     script:
       - npm install
-      - echo "Install Angular 2+ CLI 15"
-      - npm install @angular/cli@15
       - echo "Starting Application build stage."
       - ng version
       - echo "Running unit tests."
