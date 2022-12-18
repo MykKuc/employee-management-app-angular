@@ -17,7 +17,7 @@ build employee management app angular:
         - dist/employee-management-app-angular/
       expire_in: "3 minutes"
 
-deploy application to amazon s3:
+deploy application to aws:
     stage: deploy
     image:
       name: amazon/aws-cli:2.9.0
@@ -25,3 +25,6 @@ deploy application to amazon s3:
     script:
       - aws --version
       - aws s3 sync dist/employee-management-app-angular/ s3://$AWS_S3_BUCKET --delete
+      - echo "Create Amazon CloudFront invalidations for the 2 distributions."
+      - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_NOSUBDOMAIN_DISTRIBUTION_ID --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_WWW_DISTRIBUTION_ID --paths "/*"

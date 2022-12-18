@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { EmployeeslistComponent } from './employeeslist/employeeslist.component';
-import { CategorylistComponent } from './categorylist/categorylist.component';
 import { NewemployeeComponent } from './newemployee/newemployee.component';
 import { EmployeecardComponent } from './employeecard/employeecard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { DepartmentlistComponent } from './departmentlist/departmentlist.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +19,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     MainpageComponent,
     EmployeeslistComponent,
-    CategorylistComponent,
     NewemployeeComponent,
     EmployeecardComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
+    DepartmentlistComponent
   ],
   imports: [
     BrowserModule,
