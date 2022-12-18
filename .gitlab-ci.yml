@@ -9,11 +9,11 @@ build employee management app angular:
     script:
       - npm install
       - echo "Starting Application build stage."
-      - ng version
+      - ./node_modules/.bin/ng version
       - echo "Running unit tests."
-      - ng test
+      - ./node_modules/.bin/ng test
       - echo "Building the application."
-      - ng build
+      - ./node_modules/.bin/ng build
     artifacts:
       paths:
         - dist/employee-management-app-angular/
