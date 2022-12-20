@@ -14,8 +14,9 @@ export class EmployeeslistComponent {
 
   ngOnInit() {
     this.httpService.getAllEmployees().subscribe(
-        (response) => {console.log(response);}
-    )
+        (response) => {this.employees = response},
+        (error) => {console.log(error)}
+        )
   }
   
 
