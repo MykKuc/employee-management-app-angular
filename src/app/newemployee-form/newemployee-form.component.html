@@ -1,0 +1,14 @@
+
+ <form #newEmployeeForm="ngForm" (ngSubmit)="onSubmitNewEmployee(newEmployeeForm.value)" class="new-employee-form" novalidate>
+
+    <p>Please enter the name of the new employee.</p>
+    <label for="new-employee-name">Employee Name </label>
+    <input name="employeeName" id="new-employee-name" type="text" ngModel placeholder="Name" required>
+
+    <p>Please enter the last name of the new employee.</p>
+    <label for="new-employee-surname">Employee last name </label>
+    <input name="employeeSurname" id="new-employee-surname" type="text" ngModel placeholder="Last name" required>
+
+    <button type="submit" class="submit-button">Submit</button>
+
+ </form>

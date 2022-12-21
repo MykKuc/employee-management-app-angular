@@ -1,3 +1,18 @@
 <app-navbar></app-navbar>
-<h2>List of All Employees!</h2>
-<p>Here you can see the list of all the employees in organization.</p>
+
+<h2 class="font-bold">List of All Employees!</h2>
+
+<p>Here you can see the list of all the employees in organization. 
+    Here you can see different information about each employee.
+</p>
+<p>You can see information as the name, surname, salary, department of the employees.</p>
+
+<!--Below is the card for each employee.-->
+<div *ngFor="let employee of employees" class="cust-employee-card">
+    <div class="cust-employee-info">
+        <p>The Id of employee: {{employee.id}}</p>
+        <p>The Name of employee: {{employee.employeeName}}</p>
+        <p>The Last Name of employee: {{employee.employeeSurname}}</p>
+        <p>This is the salary of the employees: {{employee.salary}}</p>
+    </div>
+</div>

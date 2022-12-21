@@ -1,0 +1,39 @@
+.new-employee-form{
+    position: absolute;
+    left: 25%;
+    height: 30%;
+    width: 45%;
+    margin-top: 3%;
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 15px;
+}
+
+#new-employee-name{
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#new-employee-surname{
+    border-color: black;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.submit-button{
+    position: absolute;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    border-radius: 10px;
+    top: 70%;
+    background-color: rgb(52, 207, 212);
+}
+
+.submit-button:hover{
+    background-color: rgb(60, 179, 179);
+}

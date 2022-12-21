@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +13,15 @@ import { EmployeecardComponent } from './employeecard/employeecard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { DepartmentlistComponent } from './departmentlist/departmentlist.component';
+import { NewemployeeFormComponent } from './newemployee-form/newemployee-form.component';
 
 @NgModule({
+   imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -23,12 +31,8 @@ import { DepartmentlistComponent } from './departmentlist/departmentlist.compone
     EmployeecardComponent,
     NavbarComponent,
     FooterComponent,
-    DepartmentlistComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    DepartmentlistComponent,
+    NewemployeeFormComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
