@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpService } from '../http.service';
 import { Employee } from '../interfaces/employee';
+import { NewEmployee } from '../interfaces/new-employee';
 
 @Component({
   selector: 'app-newemployee-form',
@@ -17,9 +18,11 @@ export class NewemployeeFormComponent {
 
   departments = ['Engineering','Marketing','Administrative'];
 
-  onSubmitNewEmployee(newEmployeeForm: any) {
+  onSubmitNewEmployee(newEmployeeForm: NewEmployee) {
     console.log(newEmployeeForm);
-    this.httpService.addNewEmployee(newEmployeeForm);
+    this.httpService.addNewEmployee(newEmployeeForm).subscribe(
+      (response) => {console.log(response);}
+    )
   }
 
 }

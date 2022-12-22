@@ -1,7 +1,7 @@
 .new-employee-form{
     position: absolute;
     left: 25%;
-    height: 30%;
+    height: 40%;
     width: 45%;
     margin-top: 3%;
     border-color: black;
@@ -24,13 +24,20 @@
     border-radius: 10px;
 }
 
+#new-employee-salary{
+    border-radius: 15px;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+}
+
 .submit-button{
     position: absolute;
     border-style: solid;
     border-width: thin;
     border-color: black;
     border-radius: 10px;
-    top: 70%;
+    top: 80%;
     background-color: rgb(52, 207, 212);
 }
 

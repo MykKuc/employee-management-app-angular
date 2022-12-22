@@ -11,8 +11,6 @@ export class EmployeeslistComponent {
 
   constructor(public httpService: HttpService) {}
 
-  names = ['Theresa','Morris','Duane','Taz'];
-
   employees : Employee[];
 
   ngOnInit() {

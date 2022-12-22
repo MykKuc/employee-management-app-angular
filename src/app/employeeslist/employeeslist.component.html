@@ -8,11 +8,14 @@
 <p>You can see information as the name, surname, salary, department of the employees.</p>
 
 <!--Below is the card for each employee.-->
-<div *ngFor="let employee of employees" class="cust-employee-card">
-    <div class="cust-employee-info">
-        <p>The Id of employee: {{employee.id}}</p>
+<ul>
+    <li *ngFor="let employee of employees" >
+      <div class="cust-employee-card">
+        <p>The Id of employee: {{employee.employeeId}}</p>
         <p>The Name of employee: {{employee.employeeName}}</p>
         <p>The Last Name of employee: {{employee.employeeSurname}}</p>
         <p>This is the salary of the employees: {{employee.salary}}</p>
-    </div>
-</div>
+     </div>
+   </li>
+
+</ul>
