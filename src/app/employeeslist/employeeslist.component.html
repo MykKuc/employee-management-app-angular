@@ -23,6 +23,7 @@
         <p>The Name of employee: {{employee.employeeName}}</p>
         <p>The Last Name of employee: {{employee.employeeSurname}}</p>
         <p [ngStyle]="{'color': getSalaryColor(employee.salary)}">The Gross salary of the employee: {{employee.salary}}</p>
+        <button class="delete-button" (click)="deleteEmployee(employee.employeeId)">Remove employee</button>
      </div>
    </li>
 

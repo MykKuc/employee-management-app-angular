@@ -14,20 +14,28 @@ export class EmployeeslistComponent {
   employees : Employee[];
 
   ngOnInit() {
+    this.getAllEmployees();
+    this.httpService.RefreshRequired.subscribe((res) => {
+      this.getAllEmployees();
+    })
+  }
+
+  getAllEmployees() {
     this.httpService.getAllEmployees().subscribe(
         (response: any) => {this.employees = response; console.log(response)},
         (error) => {console.log(error)}
         )
   }
 
-  /*getSalaryFontColor() {
-    if(this.employees[this.employees]){}
-    else if(){}
-    else if(){}
-    else {
-
-    }
-  } */
+  deleteEmployee(employeeId: number) {
+    this.httpService.removeEmployee(employeeId).subscribe(
+      (response) => {
+        if (response){
+          this.httpService.getAllEmployees();
+        }
+      }
+    )
+  }
 
   getSalaryColor(salary: number) {
     if(salary >= 2000){
