@@ -10,3 +10,35 @@
     border-radius: 15px;
     padding: 1%;
 }
+
+.salary-colors-legend{
+    display: flex;
+}
+
+.gross-salary-colors{
+    font-weight: bolder;
+}
+
+.over-2000{
+    background-color: #367E18;
+}
+
+.over-1600{
+    background-color: #FFE9A0;
+}
+
+.over-1200{
+    background-color: #F57328;
+}
+
+.lower-1200{
+    background-color: #CC3636;
+}
+
+.salary-legend-element{
+    margin-left: 8%;
+    border-color: black;
+    border-width: thin;
+    border-radius: 15px;
+    padding: 5px;
+}

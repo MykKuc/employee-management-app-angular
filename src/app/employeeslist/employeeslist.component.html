@@ -7,6 +7,14 @@
 </p>
 <p>You can see information as the name, surname, salary, department of the employees.</p>
 
+<span class="salary-colors-legend">
+    <div class="gross-salary-colors">Gross salary colors: </div>
+    <div class="over-2000 salary-legend-element">  =>2000    </div>
+    <div class="over-1600 salary-legend-element">  =>1600    </div>
+    <div class="over-1200 salary-legend-element">  =>1200    </div>
+    <div class="lower-1200 salary-legend-element">  lower than 1200   </div>
+</span>
+
 <!--Below is the card for each employee.-->
 <ul>
     <li *ngFor="let employee of employees" >
@@ -14,7 +22,7 @@
         <p>The Id of employee: {{employee.employeeId}}</p>
         <p>The Name of employee: {{employee.employeeName}}</p>
         <p>The Last Name of employee: {{employee.employeeSurname}}</p>
-        <p>This is the salary of the employees: {{employee.salary}}</p>
+        <p [ngStyle]="{'color': getSalaryColor(employee.salary)}">The Gross salary of the employee: {{employee.salary}}</p>
      </div>
    </li>
 

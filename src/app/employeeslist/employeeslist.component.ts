@@ -20,4 +20,25 @@ export class EmployeeslistComponent {
         )
   }
 
+  /*getSalaryFontColor() {
+    if(this.employees[this.employees]){}
+    else if(){}
+    else if(){}
+    else {
+
+    }
+  } */
+
+  getSalaryColor(salary: number) {
+    if(salary >= 2000){
+      return '#367E18';
+    } else if (salary >= 1600) {
+      return '#FFE9A0';
+    } else if (salary >= 1200){
+      return '#F57328';
+    } else {
+      return '#CC3636';
+    }
+  }
+
 }
